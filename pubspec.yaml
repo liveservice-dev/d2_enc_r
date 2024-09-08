@@ -4,7 +4,7 @@ description: "Destiny 2 Raid Encounter App (alpha), currently only solves the ve
 # Prevent accidental publishing to pub.dev.
 publish_to: 'none'
 
-version: 0.0.101+2
+version: 0.0.103+3
 
 environment:
   sdk: ^3.5.1

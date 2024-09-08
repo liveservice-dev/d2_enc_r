@@ -1,35 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
-import 'src/raidPages/salvations_edge.dart';
+import '/src/raidPages/salvations_edge.dart';
+import '/src/components/appstate.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   runApp(D2Raid());
-  runApp(
-    MaterialApp(
-      title: 'D2 Encounter - Raids',
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const D2Raid(),
-        '/home': (context) => const Home(),
-        '/home/SERaid': (context) => const SalvationsEdge(),
-        '/SERaid/SEEnc1': (context) => const SEEncOne(),
-        '/SERaid/SEEnc2': (context) => const SEEncTwo(),
-        '/SERaid/SEEnc3': (context) => const SEEncThree(),
-        '/SEraid/SEEnc4': (context) => const SEEncFour(),
-        '/SEraid/SEEnc5': (context) => const SEEncFive(),
-        '/Seraid/vPuzzle': (context) => const VeritySolver(),
-        '/vPuzzle/vSolve': (context) => const VeritySolution(),
-      },
-    ),
-  );
 }
 class D2Raid extends StatelessWidget {
   const D2Raid({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var appState = context.watch<VPAppState>();
+    appState.appStart();
     WakelockPlus.enable();
     return ChangeNotifierProvider(
       create: (context) => VPAppState(),
