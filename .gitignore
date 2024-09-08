@@ -43,4 +43,4 @@ app.*.map.json
 /android/app/release
 
 # oversize artifacts
-android/java_pid34900.hprof
+android/*.hprof
