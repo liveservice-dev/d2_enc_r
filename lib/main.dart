@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
-import '/src/raidPages/salvations_edge.dart';
-import '/src/components/appstate.dart';
+import 'src/raidPages/salvations_edge.dart';
+import 'src/components/appstate.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -13,8 +13,6 @@ class D2Raid extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var appState = context.watch<VPAppState>();
-    appState.appStart();
     WakelockPlus.enable();
     return ChangeNotifierProvider(
       create: (context) => VPAppState(),

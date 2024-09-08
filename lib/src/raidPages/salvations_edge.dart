@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
 
 import '/src/components/components.dart';
+import '/src/components/appstate.dart';
 
 import './encounters/veritypuzzle.dart';
 import './encounters/se_encounters.dart';
@@ -10,6 +12,8 @@ class SalvationsEdge extends StatelessWidget {
   const SalvationsEdge({super.key});
   @override
   Widget build(BuildContext context) {
+    var appState = context.watch<VPAppState>();
+    appState.appStart();
     WakelockPlus.enable();
     return Scaffold(
       body: Padding(

@@ -436,7 +436,7 @@ class VeritySolution extends StatelessWidget {
   Widget build(BuildContext context) {
     var appState = context.watch<VPAppState>();
     final vsTheme = Theme.of(context);
-    final vsStyle = vsTheme.textTheme.displayMedium!.copyWith(
+    final vsStyle = vsTheme.textTheme.displaySmall!.copyWith(
       color: Color.fromARGB(255, 184, 60, 3),
     );
 
