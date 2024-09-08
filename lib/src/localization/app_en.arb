@@ -1,0 +1,6 @@
+{
+  "appTitle": "d2_encounter_raids",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
